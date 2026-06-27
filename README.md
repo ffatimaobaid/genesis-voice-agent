@@ -13,7 +13,7 @@ Microphone --> [Whisper STT]  ──── transcribes speech locally (no API ke
 
 --> [Groq LLM]     ──── generates natural, grounded response (llama-3.3-70b)
 
---> [ElevenLabs TTS] ── converts response to high-quality speech
+--> [TTS] ── ElevenLabs (if API key + paid plan) → gTTS → pyttsx3 fallback
 
 --> Speaker
 ```
@@ -25,7 +25,7 @@ Microphone --> [Whisper STT]  ──── transcribes speech locally (no API ke
 | Embeddings | `all-MiniLM-L6-v2` (sentence-transformers) | Free, fast, great accuracy |
 | STT | OpenAI Whisper `base` | Fully local, no API key |
 | LLM | Groq `llama-3.3-70b-versatile` | Sub-second inference |
-| TTS | ElevenLabs Turbo v2.5 | Most natural voice quality |
+| TTS |ElevenLabs Turbo v2.5 / gTTS / pyttsx3 | Fallback chain — ElevenLabs for best quality, gTTS and pyttsx3 as offline fallbacks  |
 | Audio I/O | sounddevice + soundfile | Cross-platform |
 
 ---
