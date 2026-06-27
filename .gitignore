@@ -1,0 +1,36 @@
+# Environment variables (contains private API keys)
+.env
+
+# Python Virtual Environments
+venv/
+env/
+ENV/
+
+# Python cache & compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Generated media / audio outputs
+*.mp3
+*.wav
+*.webp
+
+# Chroma Vector Database
+chroma_db/
+
+# Node.js (Frontend UI) dependencies and build artifacts
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+.env
+venv/
+__pycache__/
+*.pyc
+chroma_db/
