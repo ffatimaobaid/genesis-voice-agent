@@ -1,28 +1,21 @@
 # Genesis CPO Voice AI Agent
 
-A RAG-augmented voice AI agent that acts as customer support for the [Genesis Certified Pre-Owned](https://genesis-cpo.netlify.app/) car listings website. Customers can call in (or speak to their mic) and ask about available cars — models, variants, pricing, specs, availability — and the agent answers accurately based on live inventory.
+A RAG-augmented voice AI agent that acts as customer support for the [Genesis Certified Pre-Owned](https://genesis-cpo.netlify.app/) car listings website. Customers can call in (or speak to their mic) and ask about available cars — models, variants, pricing, specs, availability, and the agent answers accurately based on live inventory.
 
 ---
 
 ## Architecture
 
 ```
-Microphone
-    │
-    ▼
-[Whisper STT]  ──── transcribes speech locally (no API key)
-    │
-    ▼
-[ChromaDB RAG] ──── semantic search over inventory (sentence-transformers)
-    │  top-5 relevant car listings
-    ▼
-[Groq LLM]     ──── generates natural, grounded response (llama-3.3-70b)
-    │
-    ▼
-[ElevenLabs TTS] ── converts response to high-quality speech
-    │
-    ▼
-Speaker
+Microphone --> [Whisper STT]  ──── transcribes speech locally (no API key)
+
+--> [ChromaDB RAG] ──── semantic search over inventory (sentence-transformers) top-5 relevant car listings
+
+--> [Groq LLM]     ──── generates natural, grounded response (llama-3.3-70b)
+
+--> [ElevenLabs TTS] ── converts response to high-quality speech
+
+--> Speaker
 ```
 
 | Component | Technology | Reason |
