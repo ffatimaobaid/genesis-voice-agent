@@ -2,7 +2,6 @@
 
 A RAG-augmented voice AI agent that acts as customer support for the [Genesis Certified Pre-Owned](https://genesis-cpo.netlify.app/) car listings website. Customers can call in (or speak to their mic) and ask about available cars — models, variants, pricing, specs, availability, and the agent answers accurately based on live inventory.
 
-![Genesis CPO Voice Agent](screenshots/image.jpg)
 
 ---
 
